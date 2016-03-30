@@ -16,7 +16,7 @@ class Test_Windows_Setup(unittest.TestCase):
                 drive_type = "CD Rom"
             else:
                 drive_type = "Unexpected Drive Type"
-            print ("Drive Letter: %s, Diskspace %s %s, Drive Type: %s" %(d.Caption, (d.FreeSpace/1024), d.Size, drive_type))
+            print ("Drive Letter: %s, Diskspace %s %s, Drive Type: %s" %(d.Caption, d.FreeSpace, d.Size, drive_type))
             self.assertIsNotNone(d)
 
 
