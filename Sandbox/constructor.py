@@ -17,6 +17,9 @@ class Name:
     def printItNicely(self):
         return "The first name is: " + self.first + '\n' + "The middle name is: " + self.middle + '\n' + "The last name is: " + self.last
 
+    def initials(self):
+        return "Initials: " + self.first[0] + ' ' + self.middle[0] + ' ' + self.last[0]
+
 aName = Name('Mary','Elizabeth','Smith')
 bName = Name('Bob','John','Wilson')
 cName = Name('Mark','Philip','Paul')
@@ -26,3 +29,7 @@ print "==============================="
 print("Using lastFirst method gives: " + cName.lastFirst())
 print "================================"
 print(cName.printItNicely())
+print "================================="
+print ("aName Initials: " + aName.initials())
+print ("bName Initials: " + bName.initials())
+print ("cName Initials: " + cName.initials())
