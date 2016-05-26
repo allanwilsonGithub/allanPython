@@ -7,12 +7,24 @@ class Person:
         self.age = age
 
     def __str__(self):
-        return self.name + ' ' + self.age + ' ' + self.sex
+        return self.name + ' ' + str(self.age) + ' ' + self.sex
+
+    def changeName(self,name):
+        self.name = name
+
+    def changeAge(self):
+        self.age = self.age + 1
 
 Brian = Person('Brian','Male','22')
 Jill = Person('Jill','Female','52')
 
-print "Brian Age: " + Brian.age
-print "Jill Age: " + Jill.age
+person1 = Person('Jane Doe','F',23)
+person2 = Person('Bob Smith','M',55)
 
-print "Brain stats: " + str(Brian)
+print ("Person2: " + str(person2))
+person2.changeAge()
+print ("Person2: " + str(person2))
+
+print ('Person2: ' + str(person2))
+person2.changeName('Bob Hoskins')
+print ('Person2 (new): ' + str(person2))
