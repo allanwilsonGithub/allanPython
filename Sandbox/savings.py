@@ -9,6 +9,10 @@ class Account:
         return "Account number: " + str(self.acctNumber) + "\n" + \
                 "Balance: " + str(self.balance)
 
+
+    def deposit(self, amount):
+        self.balance += amount
+
 class Checking(Account):
     def __init__(self, acctNumber, balance, fee):
         Account.__init__(self, acctNumber, balance)
@@ -22,8 +26,7 @@ class Checking(Account):
     def getFee(self):
         return self.fee
 
-    def deposit(self, amount):
-        self.balance += amount
+
 
     def withdraw(self, amount):
         if amount > self.balance:
@@ -39,9 +42,6 @@ class Savings(Account):
         retStr = "Account type: Savings\n"
         retStr += Account.__str__(self)
         return retStr
-
-    def deposit(self, amount):
-        self.balance += amount
 
     def withdraw(self, amount):
         if amount > self.balance:
@@ -60,3 +60,7 @@ sa.withdraw(250)
 print(sa)
 sa.deposit(125)
 print(sa)
+accounts = [ca, sa]
+print("Displaying all accounts: ")
+for i in range(0, len(accounts)):
+    print(accounts[i])
