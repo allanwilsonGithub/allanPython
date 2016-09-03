@@ -1,3 +1,0 @@
-Requirements:
-
-pip install wmi
