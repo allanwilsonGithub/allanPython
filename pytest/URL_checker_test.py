@@ -1,19 +1,14 @@
 #usr/bin/env python
 
-import unittest
+import pytest
 import urllib2
 
-URL_Dict = {"https://iris.vaisala.com/health": "200 OK",
-            "https://iris.vaisala.com": "com.vaisala.fire.client.login.LoginStrings"}
-
-class testUrlResponses(unittest.TestCase):
-    ''' Tests that the given string is found at the given URL '''
-    def test_url_responses(self):
-        for URL in URL_Dict.keys():
-            print "Checking that : " + URL_Dict[URL] + " is found at " + URL
-            response = urllib2.urlopen(URL)
-            self.assertIn(URL_Dict[URL], response.read())
-
-
-if __name__ == '__main__':
-    unittest.main()
+@pytest.mark.parametrize("url,response_text", [
+    ("https://iris.vaisala.com/health", "200 OK"),
+    ("https://iris.vaisala.com", "com.vaisala.fire.client.login.LoginStrings"),
+])
+def test_url_responses(url,response_text):
+    ''' Tests that the given response is found at the given URL '''
+    print "Checking that : " + response_text + " is found at " + url
+    response = urllib2.urlopen(url)
+    assert response_text in response.read()
