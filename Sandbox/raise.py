@@ -12,4 +12,4 @@ try:
     rat1 = Rational(4,1)
     rat2 = Rational(3,0)
 except:
-    print("Cannot have a 0 for the denominator")
+    print("Cannot have a 0 for the denominator!")
