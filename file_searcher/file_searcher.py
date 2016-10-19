@@ -5,6 +5,7 @@ import sys
 
 files = ["leave_the_bourbon_on_the_shelf.txt",
          "gotton.txt"]
+
 strings = ["satisfied",
            "face",
            "the"]
