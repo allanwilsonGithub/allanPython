@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PythonMasterclass.iml" filepath="$PROJECT_DIR$/PythonMasterclass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringFormatting/.idea/StringFormatting.iml" filepath="$PROJECT_DIR$/StringFormatting/.idea/StringFormatting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../GIT/allanPython/TimBuchalkaCourse/.idea/TimBuchalkaCourse.iml" filepath="$PROJECT_DIR$/../../GIT/allanPython/TimBuchalkaCourse/.idea/TimBuchalkaCourse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../GIT/fire/.idea/fire.iml" filepath="$PROJECT_DIR$/../../GIT/fire/.idea/fire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabs/.idea/tabs.iml" filepath="$PROJECT_DIR$/tabs/.idea/tabs.iml" />
+    </modules>
+  </component>
+</project>
